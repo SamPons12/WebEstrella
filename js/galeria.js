@@ -18,7 +18,7 @@ function checkAnswer() {
   let userAnswer = document.getElementById('answer').value.trim().toLowerCase();
   if (userAnswer === questions[currentIndex].a) {
       alert("¡Correcto! Aquí está tu foto");
-      window.open(`imagen${currentIndex + 1}.jpg`, '_blank');
+      window.open(`galeria/imagen${currentIndex + 1}.JPEG`, '_blank');
       closePopup();
   } else {
       alert("Respuesta incorrecta, intenta de nuevo");
