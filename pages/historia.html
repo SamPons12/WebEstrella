@@ -5,126 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Historia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/historia.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #fff0f5;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        h1, h2 {
-         font-family: 'Dancing Script', cursive;
-        } 
-
-        body, p {
-         font-family: 'Poppins', sans-serif;
-        }
-        h1 {
-            text-align: center;
-            color: #ff4d4d;
-        }
-
-        p:hover{
-            cursor: pointer;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 600px;
-            margin: 50px auto;
-        }
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: #ff4d4d;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-        .timeline-item {
-            position: relative;
-            width: 50%;
-            padding: 10px 40px;
-            text-align: right;
-            margin-bottom: 20px;
-            background-color: beige;
-            border-radius: 150px;
-        }
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            text-align: left;
-        }
-        .timeline-dot {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #ff4d4d;
-            border-radius: 50%;
-            top: 10px;
-            right: -10px;
-        }
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -10px;
-        }
-        .image-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            z-index: 1000;
-        }
-        .image-popup img {
-            max-width: 100%;
-            max-height: 400px;
-        }
-        .close-btn {
-            display: block;
-            margin-top: 10px;
-            background-color: #ff4d4d;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 5px;
-            
-        }
-
-        .photo-border {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            width: 100px;
-            background: url('../assets/hellokitty.gif') repeat-y;
-            animation: movePhotos 10s linear infinite;
-            z-index: -1;
-        }
-        .left-border {
-            left: 0;
-        }
-        .right-border {
-            right: 0;
-        }
-        @keyframes movePhotos {
-            from {
-                background-position: 0 0;
-            }
-            to {
-                background-position: 0 100%;
-            }
-        }
-
-    </style>
 </head>
 <body>
     <div class="photo-border left-border"></div>
@@ -133,15 +17,31 @@
     <div class="timeline">
         <div class="timeline-item" onclick="openImage('imagen1.jpg')">
             <div class="timeline-dot"></div>
-            <p>Primer encuentro - Un día inolvidable.</p>
+            <p>Primer encuentro - Una mujer preciosa se sube a mi coche.</p>
         </div>
         <div class="timeline-item" onclick="openImage('imagen2.jpg')">
             <div class="timeline-dot"></div>
-            <p>Primera cita - Nuestra primera salida juntos.</p>
+            <p>Primera cita - Noche estrellada con un pringado en la playa.</p>
         </div>
         <div class="timeline-item" onclick="openImage('imagen3.jpg')">
             <div class="timeline-dot"></div>
-            <p>Primer 'Te amo' - Un momento especial.</p>
+            <p>Primera vez durmiendo juntos - Adictivo</p>
+        </div>
+        <div class="timeline-item" onclick="openImage('imagen3.jpg')">
+            <div class="timeline-dot"></div>
+            <p>Primera vez que te vi llorar - Gracias por siempre enseñarme como eres</p>
+        </div>
+        <div class="timeline-item" onclick="openImage('imagen3.jpg')">
+            <div class="timeline-dot"></div>
+            <p>Primera vez que vi a haru - Muy mimado esta nuestro hijo</p>
+        </div>
+        <div class="timeline-item" onclick="openImage('imagen3.jpg')">
+            <div class="timeline-dot"></div>
+            <p>Reto en la relacio - 14 dias distanciados, lo conseguimos, yujuuuu</p>
+        </div>
+        <div class="timeline-item" onclick="openImage('imagen3.jpg')">
+            <div class="timeline-dot"></div>
+            <p>Actulamente, muchas risas y felicidad - podria seguir pero hay mas cosas que ver</p>
         </div>
     </div>
 
@@ -152,14 +52,6 @@
 
     <a href="contenido.html" class="btn btn-danger d-block mx-auto mt-3" style="width: 200px;">Volver</a>
 
-    <script>
-        function openImage(src) {
-            document.getElementById('popup-img').src = src;
-            document.getElementById('popup').style.display = 'block';
-        }
-        function closeImage() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
+    <script src="../js/historia.js"></script>
 </body>
 </html>

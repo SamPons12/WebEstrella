@@ -1,0 +1,94 @@
+body{
+  overflow: scroll;
+}
+
+p:hover{
+  cursor: pointer;
+}
+
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #ff4d4d;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+  text-align: right;
+  margin-bottom: 20px;
+  background-color: beige;
+  border-radius: 150px;
+}
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  top: 10px;
+  right: -10px;
+}
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+.image-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1000;
+}
+.image-popup img {
+  max-width: 100%;
+  max-height: 400px;
+}
+.close-btn {
+  display: block;
+  margin-top: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  
+}
+
+.photo-border {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: url('../assets/hellokitty.gif') repeat-y;
+  animation: movePhotos 10s linear infinite;
+  z-index: -1;
+}
+.left-border {
+  left: 0;
+}
+.right-border {
+  right: 0;
+}

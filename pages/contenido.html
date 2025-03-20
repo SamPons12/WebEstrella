@@ -5,95 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Recuerdos 💖</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/contenido.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #fff0f5;
-            font-family: 'Poppins', sans-serif;
-        }
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            color: #ff4d4d;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .panel {
-            width: 300px;
-            height: 200px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #ff4d4d;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .panel:hover {
-            background-color: #ffcccc;
-            transform: scale(1.05);
-        }
-        .btn-back {
-            display: block;
-            margin: 30px auto;
-            background-color: #ff4d4d;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            width: 200px;
-            text-align: center;
-        }
-        .btn-back:hover {
-            background-color: #cc0000;
-        }
-        #a-veces {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <h1>Nuestros Recuerdos 💕</h1>
     
     <div class="container">
-        <a href="historia.html" class="panel" id="historia" onclick="marcarVisto('historia')">Nuestra Historia</a>
-        <a href="galeria.html" class="panel" id="galeria" onclick="marcarVisto('galeria')">Galería de Fotos</a>
-        <a href="canciones.html" class="panel" id="canciones" onclick="marcarVisto('canciones')">Canciones Especiales</a>
-        <a href="a-veces.html" class="panel" id="a-veces">A veces</a>
+        <a href="historia.html" class="panel" id="historia" onclick="marcarVisto('historia')">📖 Historia</a>
+        <a href="galeria.html" class="panel" id="galeria" onclick="marcarVisto('galeria')">📸 Galería</a>
+        <a href="canciones.html" class="panel" id="canciones" onclick="marcarVisto('canciones')">🎵 Canciones</a>
+        <a href="a-veces.html" class="panel" id="a-veces" onclick="marcarVisto('a-veces')">🎸 A Veces</a>
     </div>
     
-    <a href="index.html" class="btn-back">Volver a Inicio</a>
+    <a href="../index.html" class="btn-back">Volver a Inicio</a>
+    
+    <div class="background-video" id="back"></div>
 
-    <script>
-        function marcarVisto(pagina) {
-            localStorage.setItem(pagina, "true");
-        }
+    <div id="finalVideo">
+        <h2>Un último mensaje para ti 💖</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-        function verificarDesbloqueo() {
-            const historiaVisto = localStorage.getItem("historia") === "true";
-            const galeriaVisto = localStorage.getItem("galeria") === "true";
-            const cancionesVisto = localStorage.getItem("canciones") === "true";
-
-            if (historiaVisto && galeriaVisto && cancionesVisto) {
-                document.getElementById("a-veces").style.display = "flex";
-                document.getElementById("historia").style.display = "none";
-                document.getElementById("galeria").style.display = "none";
-                document.getElementById("canciones").style.display = "none";
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", verificarDesbloqueo);
-    </script>
+    <script src="../js/contenido.js"></script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+.spotify-widget {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  animation: slideIn 2s ease-in-out;
+}
+.photo-border {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: url('../assets/canciones.jpeg') repeat-y;
+  animation: movePhotos 30s linear infinite;
+  z-index: -1;
+}
+.left-border {
+  left: 0;
+}
+.right-border {
+  right: 0;
+}

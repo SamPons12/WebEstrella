@@ -1,0 +1,57 @@
+html{
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+  overflow-x: hidden;
+  overflow: hidden; /* Elimina el scroll */
+  text-align: center;
+  height: 100%;
+}
+
+body, p {
+  font-family: 'Poppins', sans-serif;
+ }
+
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff4d4d;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  margin-top: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes movePhotos {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: 0 100%;
+  }
+}
