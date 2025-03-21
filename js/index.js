@@ -18,3 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
       btnNo.style.top = `${randomY}px`;
   });
 });
+
+// Borrar todas las cookies
+document.cookie.split(";").forEach((cookie) => {
+  let nombre = cookie.split("=")[0].trim();
+  document.cookie = nombre + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+});
+
+// Limpiar localStorage y sessionStorage
+localStorage.clear();
+sessionStorage.clear();
+
