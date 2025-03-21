@@ -6,7 +6,6 @@ const questions = [
   { q: "¿Cuanto te quiero PISTA: es un ingrediente de cocina?", a: "un huevo" },
   { q: "¿Soy un mimado?", a: "si" }
 
-
 ];
 let currentIndex = 0;
 function askQuestion(index) {
@@ -21,7 +20,7 @@ function checkAnswer() {
       window.open(`galeria/imagen${currentIndex + 1}.JPEG`, '_blank');
       closePopup();
   } else {
-      alert("Respuesta incorrecta, intenta de nuevo");
+      alert("Respuesta incorrecta, intenta de nuevo chavala");
   }
 }
 function closePopup() {

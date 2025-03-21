@@ -64,3 +64,12 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.833);
 }
+
+.btn-custom{
+  background-color: #cc0000;
+  padding: 5px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  color: white;
+}
